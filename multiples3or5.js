@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/514b92a657cdc65150000006/train/javascript
+// https://www.codewars.com/kata/514b92a657cdc65150000006/train/javascript - 6kyu
 
 function solution(number) {
   let sum = 0;
