@@ -44,4 +44,15 @@ const highAndLow = (s) =>
     .filter((_, i, { length: l }) => i === 0 || i === l - 1)
     .join(" ");
 
-console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4")); // "42 -9"
+
+const highAndLow2 = (s) => {
+  let numStringArr = s.split(" ")
+  return `${Math.max(...numStringArr)} ${Math.min(...numStringArr)}`
+
+}
+
+
+
+
+    console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4")); // "42 -9"
+    console.log(highAndLow2("8 3 -5 42 -1 0 0 -9 4 7 4 -4")); // "42 -9"
