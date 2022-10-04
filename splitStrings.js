@@ -18,10 +18,10 @@ function solution2(str) {
   if (str.length % 2 !== 0) {
     str += "_";
   }
-let strArr = [...str]
+  let strArr = [...str];
   const iterations = str.length / 2;
-  for (let i = 0; i < iterations; i ++) {
-    outputArr[i] = strArr.splice(0,2).join('')
+  for (let i = 0; i < iterations; i++) {
+    outputArr[i] = strArr.splice(0, 2).join("");
   }
   return outputArr;
 }

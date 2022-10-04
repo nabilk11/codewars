@@ -22,15 +22,14 @@ function flyBy2(lamps, drone) {
   return 'o'.repeat(droneFlightLength) + 'x'.repeat(difference)
 }
 
-function flyBy3(lamps, drone) {
-  const droneFlightLength = drone.length
-  const lampsLength = lamps.length
-  const difference = lampsLength-droneFlightLength
 
-  for (let i in lamps) {
-    console.log(lamps[i])
+
+function flyBy3(lamps, drone){
+    return lamps.split('')
+                .map((item,index) => index < drone.length ? 'o' : item)
+                .join('')
   }
-}
+
 
 // console.log(flyBy('xxxxxxxxx', '==T'))
 // console.log(flyBy2('xxxxxxxxx', '==T'))

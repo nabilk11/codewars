@@ -3,14 +3,12 @@
 
 // function likeOrDislike(buttons) {
 
-// function likeOrDislike(buttons) {
-//   return buttons.reduce(
-//     (prev, curr) => (prev === curr ? "Nothing" : curr),
-//     "Nothing"
-//   );
-// }
+const likeOrDislike = (buttons) =>
+  buttons.reduce((prev, curr) => (prev === curr ? "Nothing" : curr), "Nothing");
 
-function likeOrDislike(buttons) {
+
+  // with for loop
+function likeOrDislike2(buttons) {
   let state = "Nothing";
 
   for (let i = 0; i < buttons.length; i++) {

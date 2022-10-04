@@ -6,23 +6,3 @@ function generateShape(integer){
     return singleLine.repeat(integer).trim()  
   }
   
-
-//   const noSpace = x => x.replaceAll(' ', '')
-
-//   const noSpace = (x)=> {
-//     let xArr = [...x]
-//     for (let i=0; i<xArr.length;i++) {
-//       if (xArr[i]===' ') xArr[i] = ''
-//     }
-//     return xArr.join('')
-//   }
-  const noSpace = (x)=> {
-    let ans = ''
-    for (let i in x) {
-      if (x[i]!==' ') ans = ans + x[i]
-    }
-    return ans
-  }
-
-
-  console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))

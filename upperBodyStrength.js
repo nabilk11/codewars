@@ -15,7 +15,7 @@ function alexMistakes(numberOfKata, timeLimit) {
   return mistakeCount;
 }
 
-// using math
+// using math - finding the floor of the log-base2, adding 1 for first iteration
 const alexMistakes2 = (numberOfKata, timeLimit) => {
   return Math.floor(Math.log2((timeLimit - 6 * numberOfKata) / 5 + 1));
 };

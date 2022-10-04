@@ -13,16 +13,14 @@ function persistence(num) {
   return multPersCount;
 }
 
-
 // with for loop
-
-const persistence2 = (num)=>{
-    let persCount = 0
-    for (let i=0;num>9;i++){
-        num = [...`${num}`].reduce((a,b)=>a*b)
-        persCount++
-    }
-    return persCount
-}
+const persistence2 = (num) => {
+  let persCount = 0;
+  for (let i = 0; num > 9; i++) {
+    num = [...`${num}`].reduce((a, b) => a * b);
+    persCount++;
+  }
+  return persCount;
+};
 console.log(persistence(39));
 console.log(persistence2(39));
