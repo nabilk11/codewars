@@ -14,19 +14,10 @@ function pendulum(vals) {
   return output;
 }
 
-function pendulum2(values) {
-  // [8,7,10,3]
-  //code here
-  let sortVals = values.sort((a, b) => a - b); // [3, 7, 8, 10]
-  let output = [sortVals.shift()]; // [3]
 
-  for (let i = 0; i < sortVals.length; i++) {
-    output.push(sortVals[i + i]); // [3,7]
-    output.unshift(sortVals[i + 1]); // [8,3]
-  }
-  output = output.filter(Number);
-  return output;
-}
+const pendulum2 = values =>
+  values.sort((a, b) => a - b).reduce((pre, val) => pre.length % 2 ? [...pre, val] : [val, ...pre], []);
 
-console.log(pendulum([8, 7, 10, 3])); // [10,4,9]
-// console.log(pendulum2([4, 10, 9])); // [10,4,9]
+
+console.log(pendulum([8, 7, 10, 3]));
+console.log(pendulum2([8, 7, 10, 3]));
