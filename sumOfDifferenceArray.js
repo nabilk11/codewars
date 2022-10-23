@@ -9,3 +9,13 @@ function sumOfDifferences(arr) {
 
   return testArr.reduce((a, b) => a + b, 0);
 }
+
+function sumOfDifferences2(arr) {
+  let sum = 0;
+  const sortedArr = arr.sort((a, b) => b - a);
+  for (let i = 0; i < sortedArr.length - 1; i++) {
+    sum += (sortedArr[i] - sortedArr[i + 1]);
+  }
+
+  return sum;
+}
