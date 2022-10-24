@@ -3,10 +3,20 @@
 // true/false - if a str has all unique chars
 
 // create a set
+// compare the size of the set to the length of the str for uniques
 
-function hasUniqueChars() {
-    let charSet = new Set(str)
-    return charSet.size == str.length
+function hasUniqueChars(str) {
+  let charSet = new Set(str);
+  return charSet.size == str.length;
 }
 
-
+// with an object
+const hasUniqueChars2 = (str) => {
+  let charObj = {};
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (charObj[char]) return false;
+    charObj[char] = true;
+  }
+  return true;
+};
