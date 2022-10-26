@@ -40,9 +40,5 @@ const xMarksTheSpot3 = (input) => {
       coords.push([i, input[i].indexOf("x")]);
     }
   }
-  if (coords.length === 1) {
-    return coords[0];
-  } else {
-    return [];
-  }
+  return coords.length === 1 ? coords[0] : [];
 };
