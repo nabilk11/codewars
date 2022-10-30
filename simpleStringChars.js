@@ -8,7 +8,7 @@ const solve = (s) => {
   let lower = 0;
   let nums = 0;
   let specChars = 0;
-  let output = [];
+
   for (let i = 0; i < s.length; i++) {
     if (/[a-z]/.test(s[i])) {
       lower++;
@@ -23,11 +23,7 @@ const solve = (s) => {
       nums++;
     }
   }
-  output.push(upper);
-  output.push(lower);
-  output.push(nums);
-  output.push(specChars);
-  return output;
+  return [upper, lower, nums, specChars];
 };
 
 // frequency object with for loop
