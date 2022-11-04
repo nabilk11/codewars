@@ -13,3 +13,8 @@ String.prototype.isUpperCase = function () {
 };
 
 
+// with test method
+
+String.prototype.isUpperCase = function () {
+    return !/[a-z]/.test(this)
+}
