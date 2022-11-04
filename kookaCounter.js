@@ -6,7 +6,6 @@ function kookaCounter(laughing) {
   let laughArray = laughing.split("a").filter((item) => item != "");
   let test = "";
   let count = 0;
-  console.log(laughArray);
   for (let i = 0; i < laughArray.length; i++) {
     test = laughArray[i];
     if (test !== laughArray[i + 1]) {
@@ -28,7 +27,12 @@ const kookaCounter2 = (l) => {
   return count;
 };
 
-
+// match method
+// match method for groups of consecutive Ha or ha
+const kookaCounter3 = (laughing) => {
+  const laughArray = laughing.match(/(Ha)+|(ha)+/g) || [];
+  return laughArray.length;
+};
 
 console.log(kookaCounter("hahahahaha"));
 console.log(kookaCounter("hahahahahaHaHaHa"));
