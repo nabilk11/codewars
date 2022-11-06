@@ -42,3 +42,5 @@ const xMarksTheSpot3 = (input) => {
   }
   return coords.length === 1 ? coords[0] : [];
 };
+
+

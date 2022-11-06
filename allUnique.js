@@ -3,7 +3,7 @@
 // true/false - if a str has all unique chars
 
 // create a set
-// compare the size of the set to the length of the str for uniques
+// compare the size of the set to the length of the str for uniques - true/false
 
 function hasUniqueChars(str) {
   let charSet = new Set(str);
