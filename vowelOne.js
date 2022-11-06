@@ -7,6 +7,8 @@ const vowelOne = (s) => {
   return s;
 };
 
+
+
 const vowelOne2 = (s) => {
   let res = [];
   for (let i = 0; i < s.length; i++) {
@@ -19,11 +21,15 @@ const vowelOne2 = (s) => {
   return res.join("");
 };
 
+
+
 // map through array w/test method
 const vowelOne3 = (s) => {
   let sArray = [...s];
   return sArray.map((item) => (/[aeiouAEIOU]/.test(item) ? 1 : 0)).join("");
 };
+
+
 
 console.log(vowelOne("vowelOne"));
 console.log(vowelOne2("vowelOne"));
