@@ -19,3 +19,11 @@ function isIsogram2(str) {
 console.log(isIsogram("Dermatoglyphics"));
 console.log(isIsogram("aba"));
 console.log(isIsogram2("Dermatoglyphics"));
+
+
+// solution comparing array length to size of new Set
+
+const isIsogram3 = (str) => {
+  const lowercaseArr = [...str.toLowerCase()]
+  return lowercaseArr.length === new Set(lowercaseArr).size
+ }
