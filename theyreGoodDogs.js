@@ -16,7 +16,7 @@ function weRateDogs(str, rating) {
   return str;
 }
 
-// better solution with rating regex 
+// better solution with rating regex
 // regex generated from https://ibnuhx.com/regex-generator/?ref=madewithvuejs.com
 
 const weRateDogs2 = (str, rating) => {
@@ -24,4 +24,10 @@ const weRateDogs2 = (str, rating) => {
   str = str.replace(ratingRegex, `${rating}/10`);
 
   return str;
+};
+
+const weRateDogs3 = (str, rating) => {
+  // regex with positive lookahead for digital before a '/'
+  const numsBeforeSlash = /\d+(?=\/)/;
+  return str.replace(numsBeforeSlash, `${rating}`);
 };
